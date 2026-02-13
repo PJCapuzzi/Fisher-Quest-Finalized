@@ -33,11 +33,7 @@ jobs:
           pip install pygbag
 
       - name: Build web output
-        run: python -m pygbag --build --PYBUILD 3.12 --ume_block 0 .
-
-      - name: Force disable media engagement block
-        run: |
-          python -c "from pathlib import Path; p=Path('build/web/index.html'); s=p.read_text(encoding='utf-8'); s=s.replace('ume_block : 1','ume_block : 0'); p.write_text(s, encoding='utf-8')"
+        run: python -m pygbag --build --PYBUILD 3.12 .
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -54,6 +50,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
