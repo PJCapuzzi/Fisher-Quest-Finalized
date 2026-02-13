@@ -1,0 +1,42 @@
+
+{
+  "window_title": "Fischer Quest!",
+  "screen_width": 960,
+  "screen_height": 540,
+  "fps": 60,
+  "background_image": "assets/backgrounds/background.png",
+
+  "levels": [
+  "level/level1.json",
+  "level/level2.json",
+  "level/level3.json"
+]
+,
+
+  "player_sprites": {
+  "player1": "assets/sprites/player1.png",
+  "player2": "assets/sprites/player2.png"
+},
+
+  "gravity": 2400,
+  "max_fall_speed": 2400,
+
+  "player": {
+    "width": 40,
+    "height": 60,
+    "move_speed": 340,
+    "jump_speed": 820
+  },
+
+  "colors": {
+    "background": [22, 24, 28],
+    "platform": [68, 102, 77],
+    "goal": [60, 200, 120],
+    "player1": [230, 80, 90],
+    "player2": [80, 160, 255],
+    "text": [240, 240, 240],
+    "panel": [76, 112, 80],
+    "panel_border": [76, 112, 80]
+  }
+}
+
